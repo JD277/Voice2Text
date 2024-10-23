@@ -9,7 +9,7 @@ Custom Responses: Based on user prompts, the assistant provides intelligent resp
 ## Requirements
 Python 3.x
 Gemini API Access
-Libraries: requests, speech_recognition, pydub, and flask
+Libraries: pyaudio, speech_recognition
 ## How It Works
 Wake Word Detection: The virtual assistant continuously listens for the phrase "Hey ADA". Once heard, the assistant starts recording the user's voice.
 Processing: The recorded voice is sent to the Gemini API, where the user's query is processed.
@@ -17,20 +17,27 @@ Response: The assistant receives a text response from the API, which is then con
 ## Installation
 Clone the repository:
 
-
-`git clone https://github.com/your-username/your-repo-name.git`
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+```
 Install the required dependencies:
 
 
-```pip install -r requirements.txt```
+```bash
+pip install -r requirements.txt
+```
 Set up your Gemini API key in the environment variables:
 
 
-```export GEMINI_API_KEY='your-api-key'```
+``` bash 
+GEMINI_API_KEY='your-api-key'
+```
 Run the application:
 
 
-```python app1.py```
+```bash
+python app1.py
+```
 # Files
 - app1.py: Main application file that integrates wake word detection, voice recording, and communication with the Gemini API.
 - grabar_audio2.py: Handles the audio recording and processing.
